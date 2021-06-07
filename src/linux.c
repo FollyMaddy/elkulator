@@ -11,7 +11,7 @@ char moviename[260];
 
 int tapespeed;
 int fullscreen=0;
-int gotofullscreen=0;
+int gotofullscreen=1;
 int videoresize=0;
 int wantloadstate=0,wantsavestate=0;
 int winsizex=640,winsizey=512;
@@ -51,6 +51,12 @@ int main(int argc, char *argv[])
         {
                 runelk();
                 if (key[KEY_F11]) entergui();
+                if (gotofullscreen == 1) 
+                {
+                fullscreen=1;
+                gotofullscreen=0;
+                enterfullscreen();
+                }
         }
         closeelk();
         return 0;
