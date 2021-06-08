@@ -51,6 +51,10 @@ int main(int argc, char *argv[])
         {
                 runelk();
                 if (key[KEY_F11]) entergui();
+                if (key[KEY_ESC])
+                {
+                return D_CLOSE;
+                }
                 if (gotofullscreen == 1) 
                 {
                 fullscreen=1;
