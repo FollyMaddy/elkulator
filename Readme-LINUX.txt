@@ -38,6 +38,12 @@ will run the emulator.
 Elkulator has been tested on x86-32 and x86-64 machines. No other architecture is guaranteed
 to work, and big-endian machines (eg PowerPC) almost certainly won't work.
 
+If running elkulator will give :
+Shutting down Allegro due to signal #11
+segmentation fault
+
+Then try changing the automake command into :
+automake -a -i
 
 Linux specifics
 ~~~~~~~~~~~~~~~
